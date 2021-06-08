@@ -1,0 +1,21 @@
+:root {
+    --color-primary: #08a6e4;
+    --color-primary-shadow: rgba(7, 172, 230, .16);
+    --color-redish: #FB3B64;
+    --color-green: #55DFB4;
+    --color-black: #000000;
+    --color-gray: #A5A5A5;
+    --color-light-gray: #f7f7f7;
+    --color-white: #FFFFFF;
+    --font-primary: 'Raleway', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: var(--font-primary);
+}
