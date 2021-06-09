@@ -137,14 +137,8 @@ a {
 }
 
 .opener__image {
-  background: url(/img/Background.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 50%;
+  height: auto;
   width: 100%;
-  justify-self: flex-end;
-  align-self: flex-end;
 }
 
 /* ======== STATISTIC CONTAINER ======== */
