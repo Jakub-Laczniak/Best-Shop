@@ -641,6 +641,25 @@ footer {
   margin-top: 6px;
 }
 
-.footer__icons a:first-of-type {
+/* .footer__icons a:first-of-type {
   margin-right: 25px;
+} */
+
+.footer__img {
+  height: 24px;
+  width: 24px;
+  background: url(/img/false/Twitter.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.img--facebook {
+  background: url(/img/false/Facebook.svg);
+}
+
+.footer__icons {
+  display: flex;
+  width: 68px;
+  justify-content: space-between;
 }
