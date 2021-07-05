@@ -24,17 +24,17 @@
   }
   
   .pricing--basic {
-    --color-border: ($color-redish);
+    border:1px solid ($color-redish);
     transform: scale(0.92);
   }
   
   .pricing--professional {
-    --color-border: $color-primary;
+    border:1px solid $color-primary;
     box-shadow: 5px 10px 27px #07ace629;
   }
   
   .pricing--premium {
-    --color-border: ($color-green);
+    border:1px solid ($color-green);
     transform: scale(0.92);
   }
   
