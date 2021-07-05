@@ -361,10 +361,6 @@ textarea {
   padding: 0.2em 0;
 }
 
-header .header__logo {
-  border: solid 1px red;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -619,10 +615,6 @@ h2 {
   font-weight: 500;
 }
 
-a {
-  text-decoration: none;
-}
-
 .paragraph {
   font-family: "Open Sans", sans-serif;
   color: #222222;
@@ -648,8 +640,6 @@ header .header__logo {
   font-weight: 300;
   font-size: 2rem;
   cursor: pointer;
-  height: 100%;
-  text-align: center;
 }
 @media (min-width: 768px) {
   header ul {
@@ -664,15 +654,18 @@ header .header__logo {
     align-items: center;
   }
   header .nav__element a {
-    transition: --transition;
+    padding: 0.3rem 0;
+    border-bottom: 0.3rem transparent solid;
+    transition: 0.4s;
     color: #a5a5a5;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.1rem;
+    text-decoration: none;
   }
-  header .nav__link:hover {
-    border-bottom: 4px #08a6e4 solid;
+  header .nav__element a:hover {
+    border-bottom: 0.3rem #08a6e4 solid;
     color: #222222;
   }
 }

@@ -6,6 +6,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 2;
+
     ul {
       visibility: hidden;
     }
@@ -15,9 +16,6 @@ header {
       font-weight: 300;
       font-size: 2rem;
       cursor: pointer;
-      height: 100%;
-      text-align: center;
-      @extend %border-test;
     }
 
     @media (min-width:$breakpoint-sm){
@@ -32,19 +30,20 @@ header {
         justify-content: space-around;
         align-items: center;
         a {
-          // padding: 30px 20px 26px;
-          // border-bottom: 4px transparent solid;
-          transition: (--transition);
+          padding: .3rem 0;
+          border-bottom: .3rem transparent solid;
+          transition: $transition;
           color: ($color-gray);
           font-family: ($font-secondary);
           font-weight: 700;
           text-transform: uppercase;
           font-size: 1.1rem;
+          text-decoration: none;
+            &:hover {
+              border-bottom: .3rem $color-primary solid;
+              color: ($color-black);
+            }
         }
-      }
-      .nav__link:hover {
-        border-bottom: 4px $color-primary solid;
-        color: ($color-black);
       }
     }
     
