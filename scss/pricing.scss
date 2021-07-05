@@ -1,0 +1,131 @@
+.pricing {
+    text-align: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 179px;
+  }
+  
+  .pricing > h2 {
+    padding-bottom: 50px;
+  }
+  
+  .pricing__container {
+    display: flex;
+    justify-content: space-between;
+    width: 1266px;
+  }
+  
+  .pricing__single {
+    width: 405px;
+    height: 500px;
+    border: 1px solid (--color-border);
+    border-radius: 18px;
+    position: relative;
+  }
+  
+  .pricing--basic {
+    --color-border: ($color-redish);
+    transform: scale(0.92);
+  }
+  
+  .pricing--professional {
+    --color-border: $color-primary;
+    box-shadow: 5px 10px 27px #07ace629;
+  }
+  
+  .pricing--premium {
+    --color-border: ($color-green);
+    transform: scale(0.92);
+  }
+  
+  .pricing__single__text {
+    position: absolute;
+    margin-top: 30px;
+    width: 405px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pricing__single__text h3 {
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: #13253b;
+    padding-bottom: 14px;
+  }
+  
+  .pricing__number {
+    font-family: ($font-secondary);
+    font-size: 4.6rem;
+    font-weight: 300;
+    color: $color-primary;
+    padding-bottom: 15px;
+  }
+  
+  .pricing__addition {
+    font-size: 1.2rem;
+    color: #13253b;
+    font-weight: 700;
+  }
+  
+  .pricing__list {
+    list-style: none;
+  }
+  
+  .pricing__list li {
+    margin-bottom: 25px;
+    font-family: ($font-secondary);
+    font-size: 1.4rem;
+    font-weight: 500;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .li__check {
+    width: 11px;
+    height: 11px;
+    margin-right: 11px;
+    border: 1px solid (--check-color);
+    background: (--check-image);
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+  }
+  
+  .li__check--present {
+    --check-color: ($color-green);
+    --check-image: url(/img/Checkmark.svg);
+  }
+  .li__check--absent {
+    --check-color: ($color-redish);
+    --check-image: url(/img/Checkmark-false.svg);
+  }
+  
+  .btn {
+    width: 165px;
+    height: 50px;
+    border-radius: 23px;
+    background-color: (--button-color);
+    outline: none;
+    border: 0;
+    font-family: ($font-secondary);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: ($color-white);
+  }
+  
+  .btn--basic {
+    --button-color: ($color-redish);
+  }
+  .btn--professional {
+    --button-color: $color-primary;
+  }
+  .btn--premium {
+    --button-color: ($color-green);
+  }

@@ -1,5 +1,5 @@
   $color-primary:#08a6e4;
-  $color-primary-shadow: rgba(7, 172, 230, 0.16);
+  $primary-shadow: 0px 3px 6px rgba(46, 46, 46, 0.16);
   $color-redish: #fb3b64;
   $color-green: #55dfb4;
   $color-black: #222222;
@@ -9,3 +9,7 @@
   $font-primary: "Raleway", sans-serif;
   $font-secondary: "Open Sans", sans-serif;
   $transition: 0.4s;
+
+  %border-test {
+    border: solid 1px red;
+  }

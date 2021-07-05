@@ -1,0 +1,135 @@
+.benefits {
+    width: 100%;
+    background-color: ($color-light-gray);
+    padding: 105px 0;
+    flex-direction: column;
+  }
+  
+  .benefit__single {
+    background-color: ($color-white);
+    margin-bottom: 37px;
+    width: 1124px;
+    height: 370px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+  }
+  
+  .benefit__double {
+    width: 1124px;
+    height: 370px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .benefit__single:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  
+  .benefit__text {
+    width: 416px;
+    margin-left: 35px;
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .benefit__text h2 {
+    color: ($color-black);
+    padding-bottom: 30px;
+  }
+  
+  .benefit__text p {
+    margin-bottom: 50px;
+  }
+  
+  .benefit__text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 328px;
+    height: 4px;
+    background-color: (--accent-color);
+    bottom: 0;
+  }
+  
+  .benefit__text--macbook::after {
+    --accent-color: ($color-redish);
+  }
+  
+  .benefit__text--iphone::after {
+    --accent-color: $color-primary;
+  }
+  
+  .benefit__text--trumpet::after {
+    --accent-color: ($color-green);
+  }
+  
+  .benefit__image {
+    position: relative;
+  }
+  
+  .benefit__image img {
+    z-index: 1;
+    position: relative;
+  }
+  
+  .benefit--macbook .benefit__image img {
+    width: 386px;
+    height: auto;
+    margin-right: 118px;
+  }
+  .benefit--iphone .benefit__image img {
+    width: 426px;
+    height: auto;
+    margin-left: 70px;
+  }
+  
+  .benefit--macbook .benefit__image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: 110px;
+    bottom: 80px;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    background-color: ($color-redish);
+    border-radius: 41px;
+    z-index: 0;
+  }
+  
+  .benefit--iphone .benefit__image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: 70px;
+    border-radius: 50%;
+    top: -12px;
+    background-color: $color-primary;
+    z-index: 0;
+  }
+  
+  .benefit__single--trumpet {
+    width: 623px;
+    height: 100%;
+  }
+  
+  .benefit__single--trumpet--image {
+    background-color: ($color-green);
+    width: 440px;
+    height: 100%;
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+  }
+  
+  .benefit__single--trumpet--image img {
+    width: 296px;
+    height: auto;
+    margin: auto;
+    margin-top: 100px;
+  }
