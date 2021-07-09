@@ -2,21 +2,126 @@
     width: 100%;
     background-color: ($color-light-gray);
     padding: 105px 0;
+    display: flex;
     flex-direction: column;
+    overflow: hidden;
+
+    .benefit__single {
+      background-color: ($color-white);
+      margin-bottom: 2.375rem;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid #e8e9ed;
+      text-align: left;
+      border-radius: 5px;
+      flex-direction: column-reverse;
+      margin-bottom: 2.625rem;
+
+      .benefit__text {
+        width: 80%;
+        margin: auto;
+        position: relative;
+          h2{
+            font-size: 1.875rem;
+            margin-top: 1.75rem;
+          }
+          p {
+            font-size: 0.875rem;
+            line-height: 1.2rem;
+            font-weight: 700;
+            margin: 3.25rem 0 1.875rem;
+          }
+      }
+    }
+    .benefit__image {
+      position: relative;
+      margin: auto;
+
+        img {
+          z-index: 1;
+          position: relative;
+        }
+    }
+
+  
+  .benefit--macbook .benefit__image img {
+    width: 12rem;
+    margin-top: 2.375rem;
+  }
+
+  .benefit--macbook .benefit__image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5.625rem;
+    height: 5.625rem;
+    left: 110px;
+    bottom: 40px;
+    background-color: ($color-redish);
+    border-radius: 40px;
+    transform: rotate(45deg);
+    z-index: 0;
+  }
+
+
+  .benefit--iphone .benefit__image img {
+    width: 11rem;
+    margin-top: 1rem;
   }
   
+  .benefit--iphone .benefit__image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left:0;
+    border-radius: 50%;
+    top: 10px;
+    background-color: $color-primary;
+    z-index: 0;
+  }
+  
+  .benefit__single--trumpet--image {
+    background-color: ($color-green);
+    width: 90%;
+    border: 1px solid #e8e9ed;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    // border: 1px solid red;
+    margin-top: -48px;
+
+  }
+  
+  .benefit__single--trumpet--image img {
+    width: 296px;
+    margin-top: 100px;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+  
+  .benefit--macbook .benefit__image img {
+    width: 386px;
+    height: auto;
+    margin-right: 118px;
+  }
+
   .benefit__single {
     background-color: ($color-white);
     margin-bottom: 37px;
     width: 1124px;
-    height: 370px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #e8e9ed;
     border-radius: 5px;
   }
-  
+
   .benefit__double {
     width: 1124px;
     height: 370px;
@@ -28,59 +133,7 @@
   .benefit__single:nth-child(2) {
     flex-direction: row-reverse;
   }
-  
-  .benefit__text {
-    width: 416px;
-    margin-left: 35px;
-    margin-right: 20px;
-    position: relative;
-  }
-  
-  .benefit__text h2 {
-    color: ($color-black);
-    padding-bottom: 30px;
-  }
-  
-  .benefit__text p {
-    margin-bottom: 50px;
-  }
-  
-  .benefit__text::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 328px;
-    height: 4px;
-    background-color: (--accent-color);
-    bottom: 0;
-  }
-  
-  .benefit__text--macbook::after {
-    --accent-color: ($color-redish);
-  }
-  
-  .benefit__text--iphone::after {
-    --accent-color: $color-primary;
-  }
-  
-  .benefit__text--trumpet::after {
-    --accent-color: ($color-green);
-  }
-  
-  .benefit__image {
-    position: relative;
-  }
-  
-  .benefit__image img {
-    z-index: 1;
-    position: relative;
-  }
-  
-  .benefit--macbook .benefit__image img {
-    width: 386px;
-    height: auto;
-    margin-right: 118px;
-  }
+
   .benefit--iphone .benefit__image img {
     width: 426px;
     height: auto;
@@ -125,6 +178,7 @@
     height: 100%;
     border: 1px solid #e8e9ed;
     border-radius: 5px;
+    margin-top: 50px;
   }
   
   .benefit__single--trumpet--image img {
@@ -133,3 +187,32 @@
     margin: auto;
     margin-top: 100px;
   }
+  
+  .benefit__single:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  
+  
+  .benefit__text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 328px;
+    height: 4px;
+    background-color: red;
+    bottom: 0;
+  }
+  
+  .benefit__text--macbook::after {
+    --accent-color: ($color-redish);
+  }
+  
+  .benefit__text--iphone::after {
+    --accent-color: $color-primary;
+  }
+  
+  .benefit__text--trumpet::after {
+    --accent-color: ($color-green);
+  }
+}
+}

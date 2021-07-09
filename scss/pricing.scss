@@ -1,6 +1,8 @@
 .pricing {
     text-align: center;
     flex-direction: column;
+    display: flex;
+    overflow: hidden;
     padding-top: 100px;
     padding-bottom: 179px;
   }
