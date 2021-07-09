@@ -361,10 +361,6 @@ textarea {
   padding: 0.2em 0;
 }
 
-.image {
-  border: solid 1px red;
-}
-
 .visibility {
   height: 8.5rem;
 }
@@ -720,15 +716,23 @@ header i:hover {
     margin-right: 2rem;
   }
   header .small-header {
-    width: 40%;
+    width: 20%;
     margin-left: 2rem;
+  }
+}
+@media (min-width: 1600px) {
+  header nav {
+    margin-right: 12rem;
+    width: 40%;
+  }
+  header .small-header {
+    margin-left: 12rem;
   }
 }
 
 .opener {
   width: 100%;
   height: 100vh;
-  flex-direction: column;
   position: relative;
 }
 .opener .opener__text {
@@ -738,25 +742,27 @@ header i:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: calc(4.375rem + 6.25rem);
 }
 .opener .opener__text h1 {
   color: #222222;
   font-size: 2.1875rem;
   font-weight: 500;
-  padding-top: 130px;
 }
 .opener .opener__text p {
   font-size: 1rem;
+  width: 50%;
+  line-height: 1.375rem;
   padding: 20px 0 38px;
   margin-bottom: auto;
 }
-
-.btn__large {
+.opener .btn__large {
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
+  text-decoration: none;
   font-weight: 700;
-  padding: 22px 157px;
+  padding: 1.375em 5.75em;
   border-radius: 40px;
   background-color: #08a6e4;
 }
@@ -774,82 +780,87 @@ header i:hover {
 }
 
 .statistic {
-  flex-direction: column;
   background-color: #ffffff;
   text-align: center;
-  max-width: 800px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 3.125rem;
+  padding-bottom: 3.125rem;
 }
-
-.statistic > h2 {
-  padding: 100px 0;
+.statistic h2 {
+  font-size: 1.875rem;
+  line-height: 2.1875rem;
+  width: 65%;
+  margin: auto;
 }
-
-.statistic__box {
+.statistic .statistic__box {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
-
-.single__stat {
+.statistic .statistic__box .single__stat {
   max-width: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding-bottom: 121px;
+  margin-top: 2.2rem;
 }
-
-.stat__circle {
-  width: 63px;
-  height: 63px;
+.statistic .statistic__box .single__stat .stat__circle {
+  width: 4rem;
+  height: 4rem;
   border-radius: 50px;
   position: relative;
 }
-
-.single__stat:nth-child(1) .stat__circle {
+.statistic .statistic__box .single__stat:nth-child(1) .stat__circle {
   background-color: #fb3b64;
 }
-
-.single__stat:nth-child(2) .stat__circle {
+.statistic .statistic__box .single__stat:nth-child(2) .stat__circle {
   background-color: #08a6e4;
 }
-
-.single__stat:nth-child(3) .stat__circle {
+.statistic .statistic__box .single__stat:nth-child(3) .stat__circle {
   background-color: #55dfb4;
 }
-
-.stat__image {
+.statistic .statistic__box .single__stat .stat__image {
   position: absolute;
 }
-
-.single__stat:nth-child(1) .stat__image {
+.statistic .statistic__box .single__stat .single__stat:nth-child(1) .stat__image {
   top: 0;
   left: 45%;
 }
-
-.single__stat:nth-child(2) .stat__image {
+.statistic .statistic__box .single__stat .single__stat:nth-child(2) .stat__image {
   top: 25%;
   left: 30%;
 }
-
-.single__stat:nth-child(3) .stat__image {
+.statistic .statistic__box .single__stat .single__stat:nth-child(3) .stat__image {
   top: 6px;
   left: 50%;
 }
-
-.stat__number {
+.statistic .statistic__box .single__stat .stat__number {
   font-weight: 900;
-  font-size: 2rem;
-  line-height: 2.4rem;
+  font-size: 1.25rem;
   letter-spacing: 0.6rem;
-  margin-top: 12px;
+  margin-top: 1rem;
 }
-
-.stat__paragraph {
-  font-size: 1.6rem;
+.statistic .statistic__box .single__stat .stat__paragraph {
+  font-size: 1rem;
+  line-height: 1.25rem;
   font-weight: 500;
-  margin-top: 19px;
+  margin-top: 1.2rem;
+  color: #a5a5a5;
+}
+@media (min-width: 768px) {
+  .statistic .statistic__box {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    width: 100%;
+    border: solid 1px red;
+    margin: 100px 0 120px;
+  }
 }
 
 .benefits {
@@ -1239,7 +1250,7 @@ header i:hover {
   line-height: 17px;
 }
 
-.form .btn {
+.form {
   font-size: 1.2rem;
   padding: 20px 97px;
   align-self: flex-end;

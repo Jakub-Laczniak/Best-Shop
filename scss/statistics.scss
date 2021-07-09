@@ -1,74 +1,97 @@
 .statistic {
-    flex-direction: column;
     background-color: ($color-white);
     text-align: center;
-    max-width: 800px;
-  }
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 3.125rem;
+    padding-bottom: 3.125rem;
+
+    h2 {
+      font-size: 1.875rem;
+      line-height: 2.1875rem;
+      width: 65%;
+      margin: auto;
+    }
+
+    .statistic__box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      
+      .single__stat {
+        max-width: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-top: 2.2rem;
+
+        .stat__circle {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50px;
+          position: relative;
+        }
+        &:nth-child(1) .stat__circle {
+          background-color: ($color-redish);
+        }
+        &:nth-child(2) .stat__circle {
+          background-color: $color-primary;
+        }
+        &:nth-child(3) .stat__circle {
+          background-color: ($color-green);
+        }
+        .stat__image {
+          position: absolute;
+        }
+        
+        .single__stat:nth-child(1) .stat__image {
+          top: 0;
+          left: 45%;
+        }
+        .single__stat:nth-child(2) .stat__image {
+          top: 25%;
+          left: 30%;
+        }
+        .single__stat:nth-child(3) .stat__image {
+          top: 6px;
+          left: 50%;
+        }
+        .stat__number {
+          font-weight: 900;
+          font-size: 1.25rem;
+          letter-spacing: 0.6rem;
+          margin-top: 1rem;
+        }
+        
+        .stat__paragraph {
+          font-size: 1rem;
+          line-height: 1.25rem;
+          font-weight: 500;
+          margin-top: 1.2rem;
+          color: $color-gray;
+        }
+        }
+
+        @media (min-width: $breakpoint-sm){
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+        width: 100%;
+        border: solid 1px red;
+        margin: 100px 0 120px;
+        }
+      }
+    }
+
   
-  .statistic > h2 {
-    padding: 100px 0;
-  }
   
-  .statistic__box {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
+
   
-  .single__stat {
-    max-width: 160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 121px;
-  }
+
   
-  .stat__circle {
-    width: 63px;
-    height: 63px;
-    border-radius: 50px;
-    position: relative;
-  }
+
   
-  .single__stat:nth-child(1) .stat__circle {
-    background-color: ($color-redish);
-  }
-  .single__stat:nth-child(2) .stat__circle {
-    background-color: $color-primary;
-  }
-  .single__stat:nth-child(3) .stat__circle {
-    background-color: ($color-green);
-  }
-  
-  .stat__image {
-    position: absolute;
-  }
-  
-  .single__stat:nth-child(1) .stat__image {
-    top: 0;
-    left: 45%;
-  }
-  .single__stat:nth-child(2) .stat__image {
-    top: 25%;
-    left: 30%;
-  }
-  .single__stat:nth-child(3) .stat__image {
-    top: 6px;
-    left: 50%;
-  }
-  
-  .stat__number {
-    font-weight: 900;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    letter-spacing: 0.6rem;
-    margin-top: 12px;
-  }
-  
-  .stat__paragraph {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-top: 19px;
-  }

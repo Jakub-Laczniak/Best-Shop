@@ -6,7 +6,6 @@ header {
     width: 100%;
     top: 0;
     z-index: 2;
-    // max-width: 1200px;
     
     .small-header {
       width: 90%;
@@ -107,9 +106,19 @@ header {
 
       .small-header {
         // border: solid 1px red;
-        width: 40%;
+        width: 20%;
         margin-left: 2rem;
       }
+  }
+
+  @media (min-width:$breakpoint-lg){
+    nav {
+      margin-right: 12rem;
+      width: 40%;
+    }
+    .small-header {
+      margin-left: 12rem;
+    }
   }
 }
   
